@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Estructuras Discretas 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-card:hover {
+            transform: translateY(-4px);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="flex items-center gap-3 mb-4">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <div>
+                    <h1 class="text-4xl font-bold">Estructuras Discretas 2</h1>
+                    <p class="text-indigo-100 mt-1">Blog de Matemáticas Discretas</p>
+                </div>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 mt-6">
+                <h2 class="text-xl font-semibold mb-2">Información del Estudiante</h2>
+                <div class="space-y-1">
+                    <p class="text-lg"><strong>Apellidos:</strong> Vicente Medina</p>
+                    <p class="text-lg"><strong>Nombres:</strong> Eder Lucio</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8" id="mainContent">
+        <!-- Posts Grid (shown by default) -->
+        <div id="postsGrid">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Publicaciones del Blog</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Post 1 -->
+                <div onclick="showPost(1)" class="hover-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">
+                        <svg class="w-12 h-12 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold">Teoría de Números y Combinatoria</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Fundamentos de números primos, divisibilidad, combinaciones y permutaciones en matemáticas discretas.</p>
+                        <button class="mt-4 text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
+                            Leer más →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div onclick="showPost(2)" class="hover-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">
+                        <svg class="w-12 h-12 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold">Recursión</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Técnicas recursivas para resolver problemas complejos mediante la división en casos base y recursivos.</p>
+                        <button class="mt-4 text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
+                            Leer más →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div onclick="showPost(3)" class="hover-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">
+                        <svg class="w-12 h-12 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold">Relaciones</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Análisis profundo de relaciones binarias, sus propiedades y aplicaciones en estructuras matemáticas.</p>
+                        <button class="mt-4 text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
+                            Leer más →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div onclick="showPost(4)" class="hover-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">
+                        <svg class="w-12 h-12 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold">Aritmética Modular</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Sistema matemático de aritmética cíclica fundamental para criptografía y teoría de números.</p>
+                        <button class="mt-4 text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
+                            Leer más →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl shadow-lg p-8 text-center">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">¡Gracias por visitar!</h2>
+                <p class="text-gray-700">Explora cada tema haciendo clic en las tarjetas</p>
+            </div>
+        </div>
+
+        <!-- Individual Post View (hidden by default) -->
+        <div id="postView" style="display: none;">
+            <button onclick="showGrid()" class="mb-6 text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-2">
+                ← Volver a publicaciones
+            </button>
+            
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div id="postHeader" class="bg-gradient-to-r from-indigo-500 to-purple-500 p-8 text-white">
+                    <!-- Dynamic content -->
+                </div>
+                
+                <div id="postContent" class="p-8">
+                    <!-- Dynamic content -->
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-300">Blog de Estructuras Discretas 2 - 2025</p>
+            <p class="text-gray-400 text-sm mt-2">Vicente Medina, Eder Lucio</p>
+            <p class="text-gray-400 text-sm mt-2">Material educativo para el curso de matemáticas discretas</p>
+        </div>
+    </footer>
+
+    <script>
+        const posts = {
+            1: {
+                title: "Teoría de Números y Combinatoria",
+                icon: `<svg class="w-14 h-14 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>`,
+                intro: "La teoría de números es una rama fundamental de las matemáticas que estudia las propiedades y relaciones de los números enteros. Combinada con la combinatoria, forma la base de muchos algoritmos computacionales modernos.",
+                sections: [
+                    {
+                        title: "Números Primos y Divisibilidad",
+                        content: "Un número primo es un entero mayor que 1 que solo es divisible por 1 y por sí mismo. Los primeros números primos son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47..."
+                    },
+                    {
+                        title: "Teorema Fundamental de la Aritmética",
+                        content: "Todo número entero mayor que 1 puede expresarse de forma única como producto de números primos.",
+                        example: {
+                            title: "Descomposición de 360:",
+                            steps: ["360 ÷ 2 = 180", "180 ÷ 2 = 90", "90 ÷ 2 = 45", "45 ÷ 3 = 15", "15 ÷ 3 = 5", "5 ÷ 5 = 1"],
+                            result: "360 = 2³ × 3² × 5"
+                        }
+                    },
+                    {
+                        title: "Máximo Común Divisor (MCD)",
+                        content: "El MCD de dos números es el mayor entero positivo que divide a ambos números. Se calcula mediante el algoritmo de Euclides.",
+                        example: {
+                            title: "Calcular MCD(48, 18):",
+                            steps: ["48 = 2 × 18 + 12", "18 = 1 × 12 + 6", "12 = 2 × 6 + 0"],
+                            result: "MCD(48, 18) = 6"
+                        }
+                    },
+                    {
+                        title: "Permutaciones",
+                        content: "Las permutaciones son ordenaciones de n elementos donde el orden importa. Fórmula: P(n) = n!",
+                        example: {
+                            title: "¿De cuántas formas pueden ordenarse 5 libros en un estante?",
+                            steps: ["Primera posición: 5 opciones", "Segunda posición: 4 opciones", "Tercera posición: 3 opciones", "Cuarta posición: 2 opciones", "Quinta posición: 1 opción"],
+                            result: "P(5) = 5! = 5 × 4 × 3 × 2 × 1 = 120 formas"
+                        }
+                    },
+                    {
+                        title: "Combinaciones",
+                        content: "Las combinaciones son selecciones de k elementos de un conjunto de n elementos donde el orden no importa. Fórmula: C(n,k) = n! / (k!(n-k)!)",
+                        example: {
+                            title: "Formar un comité de 3 personas de un grupo de 10:",
+                            steps: ["C(10,3) = 10! / (3! × 7!)", "C(10,3) = (10 × 9 × 8) / (3 × 2 × 1)", "C(10,3) = 720 / 6"],
+                            result: "C(10,3) = 120 comités posibles"
+                        }
+                    },
+                    {
+                        title: "Principio del Palomar",
+                        content: "Si se distribuyen n objetos en m contenedores y n > m, entonces al menos un contenedor debe contener más de un objeto. Aplicación: En cualquier grupo de 367 personas, al menos dos deben tener el mismo cumpleaños."
+                    }
+                ]
+            },
+            2: {
+                title: "Recursión",
+                icon: `<svg class="w-14 h-14 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>`,
+                intro: "La recursión es una técnica de programación donde una función se define en términos de sí misma. Es fundamental en estructuras discretas y algoritmos.",
+                sections: [
+                    {
+                        title: "Estructura de una Función Recursiva",
+                        content: "Toda función recursiva debe contener: (1) Caso Base - condición que detiene la recursión, (2) Caso Recursivo - la función se llama a sí misma con un problema más pequeño."
+                    },
+                    {
+                        title: "Factorial",
+                        content: "Definición recursiva: n! = 1 si n = 0 (caso base), n! = n × (n-1)! si n > 0 (caso recursivo).",
+                        example: {
+                            title: "Calcular 5! paso a paso:",
+                            steps: ["5! = 5 × 4!", "4! = 4 × 3!", "3! = 3 × 2!", "2! = 2 × 1!", "1! = 1 × 0!", "0! = 1 (caso base)", "Sustituyendo hacia atrás:", "1! = 1 × 1 = 1", "2! = 2 × 1 = 2", "3! = 3 × 2 = 6", "4! = 4 × 6 = 24"],
+                            result: "5! = 5 × 24 = 120"
+                        }
+                    },
+                    {
+                        title: "Sucesión de Fibonacci",
+                        content: "Serie donde cada número es la suma de los dos anteriores. F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2).",
+                        example: {
+                            title: "Calcular los primeros 10 términos:",
+                            steps: ["F(0) = 0", "F(1) = 1", "F(2) = F(1) + F(0) = 1 + 0 = 1", "F(3) = F(2) + F(1) = 1 + 1 = 2", "F(4) = F(3) + F(2) = 2 + 1 = 3", "F(5) = F(4) + F(3) = 3 + 2 = 5", "F(6) = F(5) + F(4) = 5 + 3 = 8", "F(7) = F(6) + F(5) = 8 + 5 = 13", "F(8) = F(7) + F(6) = 13 + 8 = 21", "F(9) = F(8) + F(7) = 21 + 13 = 34"],
+                            result: "Secuencia: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34"
+                        }
+                    },
+                    {
+                        title: "Torres de Hanoi",
+                        content: "Problema clásico de mover n discos siguiendo reglas específicas.",
+                        example: {
+                            title: "Resolver Torres de Hanoi con 3 discos:",
+                            steps: ["Objetivo: Mover 3 discos de A → C usando B", "Paso 1: Mover 2 discos de A → B usando C", "  - Mover disco 1 de A → C", "  - Mover disco 2 de A → B", "  - Mover disco 1 de C → B", "Paso 2: Mover disco 3 de A → C", "Paso 3: Mover 2 discos de B → C usando A", "  - Mover disco 1 de B → A", "  - Mover disco 2 de B → C", "  - Mover disco 1 de A → C"],
+                            result: "Total de movimientos: 2³ - 1 = 7"
+                        }
+                    },
+                    {
+                        title: "Suma de Dígitos",
+                        content: "Calcular la suma de los dígitos de un número usando recursión.",
+                        example: {
+                            title: "Calcular suma de dígitos de 1234:",
+                            steps: ["sumDigitos(1234) = 4 + sumDigitos(123)", "sumDigitos(123) = 3 + sumDigitos(12)", "sumDigitos(12) = 2 + sumDigitos(1)", "sumDigitos(1) = 1 (caso base: n < 10)"],
+                            result: "Total: 4 + 3 + 2 + 1 = 10"
+                        }
+                    },
+                    {
+                        title: "Ventajas y Desventajas",
+                        content: "Ventajas: Código elegante y natural para problemas con estructura recursiva. Desventajas: Mayor uso de memoria (pila de llamadas) y posible ineficiencia sin optimización (memorización)."
+                    }
+                ]
+            },
+            3: {
+                title: "Relaciones",
+                icon: `<svg class="w-14 h-14 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>`,
+                intro: "Una relación es una asociación entre elementos de conjuntos. Las relaciones son fundamentales para modelar interacciones y dependencias en matemáticas y ciencias de la computación.",
+                sections: [
+                    {
+                        title: "Definición Formal",
+                        content: "Una relación R de un conjunto A a un conjunto B es un subconjunto del producto cartesiano A × B. Si (a,b) ∈ R, escribimos aRb."
+                    },
+                    {
+                        title: "Propiedad Reflexiva",
+                        content: "Una relación es reflexiva si todo elemento está relacionado consigo mismo. Definición: para todo a ∈ A, aRa. Ejemplo: '≤' es reflexiva porque a ≤ a para todo a."
+                    },
+                    {
+                        title: "Propiedad Simétrica",
+                        content: "Una relación es simétrica si la relación es bidireccional. Definición: si aRb entonces bRa. Ejemplo: 'es hermano de' es simétrica."
+                    },
+                    {
+                        title: "Propiedad Antisimétrica",
+                        content: "Una relación es antisimétrica si dos elementos distintos no pueden estar relacionados en ambas direcciones. Definición: si aRb y bRa entonces a = b. Ejemplo: '≤' es antisimétrica."
+                    },
+                    {
+                        title: "Propiedad Transitiva",
+                        content: "Una relación es transitiva si se propaga a través de elementos intermedios. Definición: si aRb y bRc entonces aRc. Ejemplo: 'es ancestro de' es transitiva."
+                    },
+                    {
+                        title: "Relaciones de Equivalencia",
+                        content: "Una relación de equivalencia es reflexiva, simétrica y transitiva. Divide el conjunto en clases de equivalencia.",
+                        example: {
+                            title: "Congruencia módulo 5 en los enteros:",
+                            steps: ["Definición: a ≡ b (mod 5) si 5 divide a (a-b)", "Clase [0]: {..., -10, -5, 0, 5, 10, 15, ...}", "Clase [1]: {..., -9, -4, 1, 6, 11, 16, ...}", "Clase [2]: {..., -8, -3, 2, 7, 12, 17, ...}", "Clase [3]: {..., -7, -2, 3, 8, 13, 18, ...}", "Clase [4]: {..., -6, -1, 4, 9, 14, 19, ...}"],
+                            result: "Estas 5 clases cubren todos los enteros sin superposición"
+                        }
+                    },
+                    {
+                        title: "Relaciones de Orden",
+                        content: "Un orden parcial es reflexivo, antisimétrico y transitivo. Un orden total es cuando cualquier par de elementos es comparable.",
+                        example: {
+                            title: "La relación 'divide a' (|) en {2, 3, 4, 6, 12}:",
+                            steps: ["2 | 2 (reflexiva)", "2 | 4, 2 | 6, 2 | 12", "3 | 3 (reflexiva)", "3 | 6, 3 | 12", "4 | 4 (reflexiva)", "4 | 12", "6 | 6 (reflexiva)", "6 | 12", "12 | 12 (reflexiva)", "Nota: 2 y 3 son incomparables (orden parcial)"],
+                            result: "Es orden parcial porque no todos los pares son comparables"
+                        }
+                    }
+                ]
+            },
+            4: {
+                title: "Aritmética Modular",
+                icon: `<svg class="w-14 h-14 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path></svg>`,
+                intro: "La aritmética modular es un sistema donde los números 'dan la vuelta' después de alcanzar un valor llamado módulo. Es fundamental en criptografía y teoría de números.",
+                sections: [
+                    {
+                        title: "Concepto de Congruencia",
+                        content: "Dados a, b y n (módulo), decimos que a ≡ b (mod n) si n divide a (a - b). Ejemplo: 17 ≡ 5 (mod 12) porque 12 divide a (17-5)=12."
+                    },
+                    {
+                        title: "Interpretación: El Reloj",
+                        content: "Un reloj de 12 horas es aritmética módulo 12. Si son las 10 y pasan 5 horas: (10 + 5) mod 12 = 3. Después de las 12, volvemos a 1."
+                    },
+                    {
+                        title: "Operaciones Modulares",
+                        content: "Si a ≡ b (mod n) y c ≡ d (mod n), entonces las operaciones se preservan.",
+                        example: {
+                            title: "Calcular (15 + 10) × 8 módulo 7:",
+                            steps: ["Primero reducimos cada número:", "15 mod 7 = 1 (porque 15 = 2×7 + 1)", "10 mod 7 = 3 (porque 10 = 1×7 + 3)", "8 mod 7 = 1 (porque 8 = 1×7 + 1)", "Ahora operamos:", "(1 + 3) × 1 = 4 × 1 = 4", "Verificación directa:", "(15 + 10) × 8 = 25 × 8 = 200", "200 ÷ 7 = 28 residuo 4"],
+                            result: "Resultado: 4 (mod 7)"
+                        }
+                    },
+                    {
+                        title: "Inverso Multiplicativo",
+                        content: "El inverso de a módulo n es b tal que a × b ≡ 1 (mod n). Existe si MCD(a,n) = 1.",
+                        example: {
+                            title: "Encontrar el inverso de 3 módulo 7:",
+                            steps: ["Buscamos b tal que 3 × b ≡ 1 (mod 7)", "Probamos valores:", "3 × 1 = 3 (mod 7) ✗", "3 × 2 = 6 (mod 7) ✗", "3 × 3 = 9 ≡ 2 (mod 7) ✗", "3 × 4 = 12 ≡ 5 (mod 7) ✗", "3 × 5 = 15 ≡ 1 (mod 7) ✓"],
+                            result: "El inverso de 3 módulo 7 es 5"
+                        }
+                    },
+                    {
+                        title: "Teorema de Fermat",
+                        content: "Si p es primo y a no es múltiplo de p, entonces a^(p-1) ≡ 1 (mod p).",
+                        example: {
+                            title: "Verificar que 2^6 ≡ 1 (mod 7):",
+                            steps: ["Calculamos potencias de 2:", "2^1 = 2", "2^2 = 4", "2^3 = 8 ≡ 1 (mod 7)", "2^6 = (2^3)^2 ≡ 1^2 = 1 (mod 7)", "Verificación directa:", "2^6 = 64", "64 ÷ 7 = 9 residuo 1"],
+                            result: "2^6 ≡ 1 (mod 7) ✓ (Teorema verificado)"
+                        }
+                    },
+                    {
+                        title: "Algoritmo de Euclides",
+                        content: "Para encontrar MCD usando divisiones sucesivas.",
+                        example: {
+                            title: "Calcular MCD(252, 105):",
+                            steps: ["252 = 2 × 105 + 42", "105 = 2 × 42 + 21", "42 = 2 × 21 + 0", "El último residuo no nulo es el MCD"],
+                            result: "MCD(252, 105) = 21"
+                        }
+                    },
+                    {
+                        title: "Aplicaciones Prácticas",
+                        content: "1. Criptografía RSA utiliza aritmética modular. 2. Códigos de verificación: ISBN, códigos de barras. 3. Hash tables: distribución de datos. 4. Calendarios: cálculo de días de la semana."
+                    }
+                ]
+            }
+        };
+
+        function showPost(postId) {
+            const post = posts[postId];
+            document.getElementById('postsGrid').style.display = 'none';
+            document.getElementById('postView').style.display = 'block';
+            
+            document.getElementById('postHeader').innerHTML = post.icon + '<h1 class="text-4xl font-bold mb-2">' + post.title + '</h1>';
+            
+            let contentHTML = '<div class="space-y-6"><p class="text-gray-700 text-lg leading-relaxed">' + post.intro + '</p>';
+            
+            post.sections.forEach(section => {
+                contentHTML += '<div class="bg-gray-50 rounded-lg p-6 border-l-4 border-indigo-500">';
+                contentHTML += '<h3 class="text-xl font-bold text-gray-800 mb-3">' + section.title + '</h3>';
+                contentHTML += '<p class="text-gray-700 leading-relaxed mb-4">' + section.content + '</p>';
+                
+                if (section.example) {
+                    contentHTML += '<div class="mt-4 bg-white rounded-lg p-4 border border-indigo-200">';
+                    contentHTML += '<h4 class="font-semibold text-indigo-700 mb-3">' + section.example.title + '</h4>';
+                    contentHTML += '<div class="space-y-1 font-mono text-sm text-gray-700">';
+                    
+                    section.example.steps.forEach(step => {
+                        if (step.startsWith('  ')) {
+                            contentHTML += '<div class="pl-4 text-gray-600">→ ' + step.trim() + '</div>';
+                        } else {
+                            contentHTML += '<div>' + step + '</div>';
+                        }
+                    });
+                    
+                    contentHTML += '</div>';
+                    contentHTML += '<div class="mt-3 pt-3 border-t border-indigo-100 font-semibold text-indigo-700">' + section.example.result + '</div>';
+                    contentHTML += '</div>';
+                }
+                
+                contentHTML += '</div>';
+            });
+            
+            contentHTML += '</div>';
+            document.getElementById('postContent').innerHTML = contentHTML;
+            window.scrollTo(0, 0);
+        }
+
+        function showGrid() {
+            document.getElementById('postView').style.display = 'none';
+            document.getElementById('postsGrid').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
